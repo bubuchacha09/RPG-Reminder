@@ -1,0 +1,1 @@
+worker: node bubu.js
