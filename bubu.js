@@ -19,7 +19,6 @@ client.on("message", message => {
 	var mscontent = message.content
 	if(message.author.id=='555955826880413696') {//cái này là id của thằng EPIC RPG
 	var char1 = mscontent.charAt(0)
-	console.log(mscontent)
 	if (char1 == '*') {
 		if (mscontent.includes('is training')){ //training
 			var kq = '?'
@@ -189,7 +188,6 @@ else if (!message.author.bot){
 			}
 		})
 		.catch(collected => {
-			console.log('hunt');
 		});
 	}
 	else if (mscontent == 'rpg chop'){
@@ -211,7 +209,6 @@ else if (!message.author.bot){
 			}
 			})
 			.catch(() => {
-				console.log('chop')
 			});
 	}
 	else if (mscontent == 'rpg axe'){
@@ -233,7 +230,6 @@ else if (!message.author.bot){
 			}
 			})
 			.catch(() => {
-				console.log('axe')
 			});
 	}
 	else if (mscontent == 'rpg bowsaw'){
@@ -255,7 +251,6 @@ else if (!message.author.bot){
 			}
 			})
 			.catch(() => {
-				console.log('bowsaw')
 			});
 	}
 	else if (mscontent == 'rpg chainsaw'){
@@ -277,7 +272,6 @@ else if (!message.author.bot){
 			}
 			})
 			.catch(() => {
-				console.log('chainsaw')
 			});
 	}
 	else if (mscontent == 'rpg fish'){
@@ -299,7 +293,6 @@ else if (!message.author.bot){
 			}
 			})
 			.catch(() => {
-				console.log('fish')
 			});
 	}
 	else if (mscontent == 'rpg net'){
@@ -321,7 +314,6 @@ else if (!message.author.bot){
 			}
 			})
 			.catch(() => {
-				console.log('net')
 			});
 	}
 	else if (mscontent == 'rpg boat'){
@@ -343,7 +335,6 @@ else if (!message.author.bot){
 			}
 			})
 			.catch(() => {
-				console.log('boat')
 			});
 	}
 	else if (mscontent == 'rpg bigboat'){
@@ -365,7 +356,6 @@ else if (!message.author.bot){
 			}
 			})
 			.catch(() => {
-				console.log('bigboat')
 			});
 }
 else if (mscontent == 'rpg pickup'){
@@ -387,7 +377,6 @@ else if (mscontent == 'rpg pickup'){
 			}
 			})
 			.catch(() => {
-				console.log('pickup')
 			});
 }
 else if (mscontent == 'rpg ladder'){
@@ -409,7 +398,6 @@ else if (mscontent == 'rpg ladder'){
 			}
 			})
 			.catch(() => {
-				console.log('ladder')
 			});
 }
 else if (mscontent == 'rpg tractor'){
@@ -431,7 +419,6 @@ else if (mscontent == 'rpg tractor'){
 			}
 			})
 			.catch(() => {
-				console.log('tractor')
 			});
 }
 else if (mscontent == 'rpg greenhouse'){
@@ -453,7 +440,6 @@ else if (mscontent == 'rpg greenhouse'){
 			}
 			})
 			.catch(() => {
-				console.log('greenhouse')
 			});
 }
 else if (mscontent == 'rpg mine'){
@@ -475,7 +461,6 @@ else if (mscontent == 'rpg mine'){
 			}
 			})
 			.catch(() => {
-				console.log('mine')
 			});
 }
 else if (mscontent == 'rpg pickaxe'){
@@ -497,7 +482,6 @@ else if (mscontent == 'rpg pickaxe'){
 			}
 			})
 			.catch(() => {
-				console.log('pickaxe')
 			});
 }
 else if (mscontent == 'rpg drill'){
@@ -519,7 +503,6 @@ else if (mscontent == 'rpg drill'){
 			}
 			})
 			.catch(() => {
-				console.log('drill')
 			});
 }
 else if (mscontent == 'rpg dynamite'){
@@ -541,7 +524,6 @@ else if (mscontent == 'rpg dynamite'){
 			}
 			})
 			.catch(() => {
-				console.log('dynamite')
 			});
 }
 else if (mscontent == 'rpg tr'||mscontent == 'rpg training'){
@@ -559,7 +541,6 @@ else if (mscontent == 'rpg tr'||mscontent == 'rpg training'){
 				}
 			})
 			.catch(() => { 
-			console.log('training')
 			});
 }
 else if (mscontent == 'rpg adv'||mscontent == 'rpg adventure'){
@@ -594,7 +575,6 @@ else if (mscontent.startsWith('rpg buy ')){
 				}
 			})
 			.catch(() => {
-				console.log('lootbox')
 			});
 }
 else if (mscontent == 'y' || mscontent == 'yes'){
@@ -613,7 +593,6 @@ else if (mscontent == 'y' || mscontent == 'yes'){
 				}
 			})
 			.catch(() => {
-				console.log('quest1')
 			});
 }
 else if (mscontent == 'n' || mscontent == 'no'){
@@ -632,7 +611,6 @@ else if (mscontent == 'n' || mscontent == 'no'){
 				}
 			})
 			.catch(() => {
-				console.log('quest2')
 			});
 }
 }
