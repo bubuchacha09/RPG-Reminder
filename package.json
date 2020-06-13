@@ -1,0 +1,14 @@
+{
+  "name": "MyBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bubu.js",
+  "scripts": {
+    "start": "node bubu.js"
+  },
+  
+  "dependencies": {
+    "discord.js": "12.2.0"
+	"request": "2.81.0"
+  }
+}
