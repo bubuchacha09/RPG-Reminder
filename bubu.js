@@ -19,12 +19,12 @@ client.on("message", message => {
 	var mscontent = message.content
 	if(message.author.id=='555955826880413696') {//cái này là id của thằng EPIC RPG
 	var char1 = mscontent.charAt(0)
-	if (message.embeds.length==1){
-		if (message.embeds[0].description.startsWith('<:epicrpgarena')){
+	message.embeds.forEach((embed) => {
+		if (embed.description.startsWith('<:epicrpgarena')){
 			message.channel.send('Arena <:epicrpgarena:721309296843030538> <:arenacookie:721310211830186086> <@&721290735541813268> các ngài thợ săn mau tham gia đấu trường để nhận Cookie.')
 		}
-	}
-	else if (char1 == '*') {
+	})
+	if (char1 == '*') {
 		if (mscontent.includes('is training')){ //training
 			var kq = '?'
 			mscontent = mscontent.substring(mscontent.indexOf('is training')+18)//xóa tất cả các ký tự từ đầu chuỗi đến hết 'is training in the'
