@@ -21,7 +21,7 @@ client.on("message", message => {
 	var char1 = mscontent.charAt(0)
 	if (message.embeds.length==1){
 		if (message.embeds[0].description.startsWith('<:epicrpgarena')){
-			message.channel.send('Arena :epicrpgarena: :arenacookie: <@721290779670216805> các ngài thợ săn mau tham gia đấu trường để nhận Cookie.')
+			message.channel.send('Arena :epicrpgarena: :arenacookie: <@721290735541813268> các ngài thợ săn mau tham gia đấu trường để nhận Cookie.')
 		}
 	}
 	else if (char1 == '*') {
