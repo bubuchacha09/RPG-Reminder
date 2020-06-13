@@ -19,8 +19,8 @@ client.on("message", message => {
 	var mscontent = message.content
 	if(message.author.id=='555955826880413696') {//cái này là id của thằng EPIC RPG
 	var char1 = mscontent.charAt(0)
-	if (message.embed.length==1){
-		if message.embed[0].description.startsWith('<:epicrpgqarena'){
+	if (message.embeds.length==1){
+		if message.embeds[0].description.startsWith('<:epicrpgqarena'){
 			message.channel.send('Arena :epicrpgarena: :arenacookie: <@721290779670216805> các ngài thợ săn mau tham gia đấu trường để nhận Cookie.')
 		}
 	}
