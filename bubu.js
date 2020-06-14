@@ -26,16 +26,23 @@ client.on("message", message => {
 			nametext=message.embeds[0].fields[0].name
 		}
 		if (typeof descriptiontext =='string'){
-			console.log(descriptiontext)
 			if (descriptiontext.startsWith('<:epicrpgarena')){
 				message.channel.send('**__Arena__** <:epicrpgarena:721309296843030538> <:arenacookie:721310211830186086> <@&721290735541813268> các ngài thợ săn mau tham gia đấu trường để nhận Cookie.')
 				//thay emoji id va id role arena vao dong tren
 			}
 		}
 		if (typeof nametext == 'string'){
-			console.log(nametext)
 			if (nametext.startsWith('Help ')){
 				message.channel.send('**__Mini Boss__** :dagger: <@&721290779670216805> các ngài thợ săn mau đến hỗ trợ.')
+			}
+			else if (nametext.startsWith('**A MEGALODON')){
+				message.channel.send('**__FISH__** <:normiefish:721632403939917956> <:normiefish:721632403939917956> <@&721626025636790304> các ngài thợ săn mau đến để nhận normie fish.')
+			}
+			else if (nametext.startsWith('**AN EPIC TREE')){
+				message.channel.send('**__CHOP__** <:woodenlog:721633717776285726> <:woodenlog:721633717776285726> <@&721625985082195989> các ngài thợ săn mau đến để nhận wooden log.')
+			}
+			else if (nametext.startsWith("**IT'S RAINING")){
+				message.channel.send('**__CATCH__** <:coin:721630641497833503> <:coin:721630641497833503> <@&721626043437285396> các ngài thợ săn mau đến để nhận coins.')
 			}
 		}
 		if (char1 == '*') {
