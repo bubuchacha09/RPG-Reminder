@@ -18,17 +18,27 @@ client.on("ready", () => {
 client.on("message", message => {
 	var mscontent = message.content
 	if(message.author.id=='555955826880413696') {//cái này là id của thằng EPIC RPG
-	var char1 = mscontent.charAt(0)
-	var descriptiontext=''
-	if (message.embeds.length==1){
-		descriptiontext=message.embeds[0].description
-	}
-	if (typeof descriptiontext =='string'){
-		if (descriptiontext.startsWith('<:epicrpgarena')){
-			message.channel.send('**__Arena__** <:epicrpgarena:721309296843030538> <:arenacookie:721310211830186086> <@&721290735541813268> các ngài thợ săn mau tham gia đấu trường để nhận Cookie.')
+		var char1 = mscontent.charAt(0)
+		var descriptiontext=''
+		var nametext=''
+		if (message.embeds.length==1){
+			descriptiontext=message.embeds[0].description
+			nametext=message.embeds[0].fields[0].name
 		}
-	}
-	if (char1 == '*') {
+		if (typeof descriptiontext =='string'){
+			console.log(descriptiontext)
+			if (descriptiontext.startsWith('<:epicrpgarena')){
+				message.channel.send('**__Arena__** <:epicrpgarena:721309296843030538> <:arenacookie:721310211830186086> <@&721290735541813268> các ngài thợ săn mau tham gia đấu trường để nhận Cookie.')
+				//thay emoji id va id role arena vao dong tren
+			}
+		}
+		else if (typeof nametext == 'string'){
+			console.log(nametext)
+			if (nametext.startsWith('Help ')){
+				message.channel.send('**__Mini Boss__** :dagger: <@&721290779670216805> các ngài thợ săn mau đến hỗ trợ.')
+			}
+		}
+		else if (char1 == '*') {
 		if (mscontent.includes('is training')){ //training
 			var kq = '?'
 			mscontent = mscontent.substring(mscontent.indexOf('is training')+18)//xóa tất cả các ký tự từ đầu chuỗi đến hết 'is training in the'
