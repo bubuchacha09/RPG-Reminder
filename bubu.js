@@ -17,6 +17,7 @@ client.on("ready", () => {
 });
 client.on("message", message => {
 	var mscontent = message.content
+	mscontent = mscontent.replace(/  +/g, ' ').toLowerCase()
 	if(message.author.id=='555955826880413696') {//cái này là id của thằng EPIC RPG
 		var char1 = mscontent.charAt(0)
 		var descriptiontext=''
