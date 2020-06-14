@@ -32,13 +32,13 @@ client.on("message", message => {
 				//thay emoji id va id role arena vao dong tren
 			}
 		}
-		else if (typeof nametext == 'string'){
+		if (typeof nametext == 'string'){
 			console.log(nametext)
 			if (nametext.startsWith('Help ')){
 				message.channel.send('**__Mini Boss__** :dagger: <@&721290779670216805> các ngài thợ săn mau đến hỗ trợ.')
 			}
 		}
-		else if (char1 == '*') {
+		if (char1 == '*') {
 		if (mscontent.includes('is training')){ //training
 			var kq = '?'
 			mscontent = mscontent.substring(mscontent.indexOf('is training')+18)//xóa tất cả các ký tự từ đầu chuỗi đến hết 'is training in the'
