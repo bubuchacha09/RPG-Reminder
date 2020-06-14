@@ -19,11 +19,15 @@ client.on("message", message => {
 	var mscontent = message.content
 	if(message.author.id=='555955826880413696') {//cái này là id của thằng EPIC RPG
 	var char1 = mscontent.charAt(0)
-	message.embeds.forEach((embed) => {
-		if (embed.description.startsWith('<:epicrpgarena')){
-			message.channel.send('Arena <:epicrpgarena:721309296843030538> <:arenacookie:721310211830186086> <@&721290735541813268> các ngài thợ săn mau tham gia đấu trường để nhận Cookie.')
+	var descriptiontext=''
+	if (message.embeds.length==1){
+		descriptiontext=message.embeds[0].description
+	}
+	if (typeof descriptiontext =='string'){
+		if (descriptiontext.startsWith('<:epicrpgarena')){
+			message.channel.send('**__Arena__** <:epicrpgarena:721309296843030538> <:arenacookie:721310211830186086> <@&721290735541813268> các ngài thợ săn mau tham gia đấu trường để nhận Cookie.')
 		}
-	})
+	}
 	if (char1 == '*') {
 		if (mscontent.includes('is training')){ //training
 			var kq = '?'
@@ -145,14 +149,6 @@ client.on("message", message => {
 				kq = 'no'
 			}
 			message.channel.send(kq);
-		}
-		else if (message.member.roles.cache.has(idrolexoatinnhan)&&mscontent.startsWith('**__The')){
-			message.delete()
-			message.channel.send(':blue_circle:')
-		}
-		else if (message.member.roles.cache.has(idrolexoatinnhan)&&mscontent.includes('** is ')){
-			message.delete()
-			message.channel.send(':blue_circle:')
 		}
 	}
 }
