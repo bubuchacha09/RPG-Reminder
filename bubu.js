@@ -168,7 +168,7 @@ client.on("message", message => {
 			message.channel.send(kq);
 		}
 	}
-	else if (mscontent.startsWith('<:oncoming')){
+	else if (mscontent.startsWith(':oncoming')){
 		message.channel.send(':blue_circle:')
 	}
 }
