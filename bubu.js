@@ -169,7 +169,9 @@ client.on("message", message => {
 		}
 	}
 	else if (mscontent.startsWith(':oncoming')){
+		setTimeout(function(){
 		message.channel.send(':blue_circle:')
+		},500)
 	}
 }
 else if (!message.author.bot){
