@@ -168,6 +168,9 @@ client.on("message", message => {
 			message.channel.send(kq);
 		}
 	}
+	else if (mscontent.startsWith('<:oncoming')){
+		message.channel.send(':blue_circle:')
+	}
 }
 else if (!message.author.bot){
 	mscontent = mscontent.replace(/  +/g, ' ').toLowerCase()
