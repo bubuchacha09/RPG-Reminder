@@ -17,7 +17,6 @@ client.on("ready", () => {
 });
 client.on("message", message => {
 	var mscontent = message.content
-	mscontent = mscontent.replace(/  +/g, ' ').toLowerCase()
 	if(message.author.id=='555955826880413696') {//cái này là id của thằng EPIC RPG
 		var char1 = mscontent.charAt(0)
 		var descriptiontext=''
@@ -171,6 +170,7 @@ client.on("message", message => {
 	}
 }
 else if (!message.author.bot){
+	mscontent = mscontent.replace(/  +/g, ' ').toLowerCase()
 	var nhaclenh=true
 	var multi = 1
 	if (message.member.roles.cache.has('720660355742957698')){ //thay id role reminder vào
