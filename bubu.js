@@ -165,7 +165,9 @@ client.on("message", message => {
 			else if (char4 == 'n'){
 				kq = 'no'
 			}
+			setTimeout(function(){
 			message.channel.send(kq);
+			},1000)
 		}
 	}
 	else if (mscontent.startsWith(':oncoming')){
