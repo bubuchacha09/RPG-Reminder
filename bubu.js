@@ -652,7 +652,9 @@ else if (mscontent == 'rpg guild raid' ){
 						const guildraidhint= ':crossed_swords: **'+message.author.username
 						if (descriptiontext.startsWith(guildraidhint)){
 							setTimeout(function(){
-								message.reply('**__GUILD RAID__** đã sẵn sàng');
+								message.reply('**__GUILD RAID__** đã sẵn sàng')
+								.then(() => console.log(`Sent a reply to ${message.author.username}`))
+								.catch(console.error);
 							}, 10000*multi);
 						}
 					}
