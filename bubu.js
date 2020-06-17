@@ -1,4 +1,4 @@
-
+﻿
 // Load up the discord.js library
 const Discord = require("discord.js");
 // This is your client. Some people call it `bot`, some people call it `self`, 
@@ -642,17 +642,16 @@ else if (mscontent == 'n' || mscontent == 'no'){
 else if (mscontent == 'rpg guild raid' ){
 			message.channel.awaitMessages(response => response.author.id=='555955826880413696'&&response.embeds.length==1, {
 				max: 1,
-				time: 8000,
+				time: 2000,
 				errors: ['time']
 			})
 			.then(collected => {
-				var descriptiontext=collected.first().embeds[0].description
 				if (nhaclenh){
+					var descriptiontext=message.embeds[0].description
 					if (typeof descriptiontext =='string'){
-						var guildraidhint= ':crossed_swords: **'+message.author.username
-						if (descriptiontext.startsWith(guildraidhint)){
+						if (descriptiontext.startsWith(':crossed_swords: **'+message.author.username)){
 							setTimeout(function(){
-								message.reply('**__GUILD RAID__** đã sẵn sàng')
+								message.reply('**__GUILD RAID__** đã sẵn sàng');
 							}, 10000*multi);
 						}
 					}
