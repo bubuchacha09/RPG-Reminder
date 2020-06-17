@@ -646,15 +646,13 @@ else if (mscontent == 'rpg guild raid' ){
 				errors: ['time']
 			})
 			.then(collected => {
+				var descriptiontext=collected.first().embeds[0].description
 				if (nhaclenh){
-					var descriptiontext=collected.first().embeds[0].description
 					if (typeof descriptiontext =='string'){
-						const guildraidhint= ':crossed_swords: **'+message.author.username
+						var guildraidhint= ':crossed_swords: **'+message.author.username
 						if (descriptiontext.startsWith(guildraidhint)){
 							setTimeout(function(){
 								message.reply('**__GUILD RAID__** đã sẵn sàng')
-								.then(() => console.log(`Sent a reply to ${message.author.username}`))
-								.catch(console.error);
 							}, 10000*multi);
 						}
 					}
