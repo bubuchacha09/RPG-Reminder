@@ -1,4 +1,4 @@
-﻿
+
 // Load up the discord.js library
 const Discord = require("discord.js");
 // This is your client. Some people call it `bot`, some people call it `self`, 
@@ -652,7 +652,7 @@ else if (mscontent == 'rpg guild raid' ){
 						const guildraidhint= ':crossed_swords: **'+message.author.username
 						if (descriptiontext.startsWith(guildraidhint)){
 							setTimeout(function(){
-								message.reply('**__GUILD RAID__** đã sẵn sàng')
+								message.channel.reply('**__GUILD RAID__** đã sẵn sàng');
 							}, 10000*multi);
 						}
 					}
@@ -660,27 +660,6 @@ else if (mscontent == 'rpg guild raid' ){
 			})
 			.catch(() => {
 			});
-}
-else if (mscontent == 'test'){
-	message.channel.send({embed:
-	{
-    "fields":[
-        {
-            "name":"Raid",
-            "value":"**Kyo Sohma** throws a :woodenlog: wooden log\nFAILED!! The guild resisted the impact \u2014 :purple_heart: 100\/100\n**Kyo Sohma** throws a :normiefish: normie fish\nSUCCESS!! \u2014 :purple_heart: 57\/100\n**Kyo Sohma** throws an :Apple: apple\nFAILED!! The guild resisted the impact \u2014 :purple_heart: 57\/100",
-            "inline":false
-        },
-        {
-            "name":"Energy",
-            "value":"**THICCBOYS** earned **1** :low_brightness: ENERGY\n**KYO** lost **0** :low_brightness: ENERGY\nYour guild earned 1 XP",
-            "inline":false
-        }
-    ],
-    "color":10181046,
-    "type":"rich",
-    "description":":crossed_swords: **Kyo Sohma** RAIDED **THICCBOYS** :crossed_swords:\n**THICCBOYS** ~-~ :low_brightness: **13** :epicrpgshield: **1**"
-	}
-	});
 }
 }
 });
