@@ -647,8 +647,6 @@ else if (mscontent == 'rpg guild raid' ){
 			})
 			.then(collected => {
 				var descriptiontext=collected.first().embeds[0].description
-				console.log(descriptiontext)
-				console.log(nhaclenh)
 				if (nhaclenh){
 					if (typeof descriptiontext =='string'){
 						if (descriptiontext.startsWith(':crossed_swords: **'+message.author.username)){
