@@ -647,9 +647,9 @@ else if (mscontent == 'rpg guild raid' ){
 			})
 			.then(collected => {
 				if (nhaclenh){
-					var value1text=collected.first().embeds[0].fields[0].value
-					if (typeof value1text =='string'){
-						if (value1text.startsWith(':crossed_swords: **'+message.author.username)){
+					var descriptiontext=collected.first().embeds[0].description
+					if (typeof descriptiontext =='string'){
+						if (descriptiontext.startsWith(':crossed_swords: **'+message.author.username)){
 							setTimeout(function(){
 								message.channel.reply('**__GUILD RAID__** đã sẵn sàng');
 							}, 10000*multi);
