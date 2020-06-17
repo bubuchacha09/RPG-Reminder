@@ -646,8 +646,10 @@ else if (mscontent == 'rpg guild raid' ){
 				errors: ['time']
 			})
 			.then(collected => {
+				var descriptiontext=collected.embeds[0].description
+				console.log(descriptiontext)
+				console.log(nhaclenh)
 				if (nhaclenh){
-					var descriptiontext=message.embeds[0].description
 					if (typeof descriptiontext =='string'){
 						if (descriptiontext.startsWith(':crossed_swords: **'+message.author.username)){
 							setTimeout(function(){
