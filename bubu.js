@@ -646,7 +646,7 @@ else if (mscontent == 'rpg guild raid' ){
 				errors: ['time']
 			})
 			.then(collected => {
-				var descriptiontext=collected.embeds[0].description
+				var descriptiontext=collected.first().embeds[0].description
 				console.log(descriptiontext)
 				console.log(nhaclenh)
 				if (nhaclenh){
