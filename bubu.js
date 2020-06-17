@@ -654,7 +654,7 @@ else if (mscontent == 'rpg guild raid' ){
 						if (descriptiontext.startsWith(':crossed_swords: **'+message.author.username)){
 							setTimeout(function(){
 								message.reply('**__GUILD RAID__** đã sẵn sàng');
-							}, 10000*multi);
+							}, 7200000*multi);
 						}
 					}
 				}
