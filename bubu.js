@@ -639,6 +639,27 @@ else if (mscontent == 'n' || mscontent == 'no'){
 			.catch(() => {
 			});
 }
+else if (mscontent == 'rpg guild raid' ){
+			message.channel.awaitMessages(response => response.author.id=='555955826880413696'&&response.embeds.length==1, {
+				max: 1,
+				time: 2000,
+				errors: ['time']
+			})
+			.then(collected => {
+				if (nhaclenh){
+					var descriptiontext=message.embeds[0].description
+					if (typeof descriptiontext =='string'){
+						if (descriptiontext.startsWith(':crossed_swords: **'+message.author.username)){
+							setTimeout(function(){
+								message.channel.reply('**__GUILD RAID__** đã sẵn sàng');
+							}, 10000*multi);
+						}
+					}
+				}
+			})
+			.catch(() => {
+			});
+}
 }
 });
 client.login(process.env.BOT_TOKEN);
