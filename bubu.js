@@ -642,7 +642,7 @@ else if (mscontent == 'n' || mscontent == 'no'){
 else if (mscontent == 'rpg guild raid' ){
 			message.channel.awaitMessages(response => response.author.id=='555955826880413696'&&response.embeds.length==1, {
 				max: 1,
-				time: 2000,
+				time: 8000,
 				errors: ['time']
 			})
 			.then(collected => {
